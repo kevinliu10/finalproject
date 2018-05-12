@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300,400,700');
+
+html {
+    height:100%;
+}
+
+body {
+    background-image: linear-gradient(rgba(135,135,135,1), rgba(206,206,206,0.3)), url("https://source.unsplash.com/4EDAWezYOzg");
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 12em;
+    line-height: 0.5em;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    line-height: 0.5em;
+}
+
+h3{
+    color: darkblue;
+    font-family: 'Roboto', serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 0.01em;
+}
+
+h4{
+    color: darkblue;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 0.01em;
+    padding: 10px;
+}
+
+h5 {
+     font-family: 'Playfair Display', serif;
+     font-weight: 400;
+     font-size: 4em;
+     line-height: 0.5em;
+     color: darkblue;
+     text-align: center;
+ }
+
+h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 0.5em;
+    color: darkblue;
+    text-align: center;
+}
+h8{
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 0.5em;
+    color: darkblue;
+    padding: 10px;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    text-align: left;
+    line-height: 0.01em;
+    padding: 10px;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: #0b98de;
+    overflow: hidden;
+}
+nav a {
+    display: block;
+    float: left;
+    font-family: 'Roboto', serif;
+    font-size: 9px;
+    color: white;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+nav a:hover {
+    background-color: #17b0cf;
+}
+#logo {
+    color: aliceblue;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 10px;
+}
+#login{
+    color: aliceblue;
+    font-family: 'Roboto', serif;
+    font-size: 1.1em;
+    line-height: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    float:right;
+}
+#loginscreen {
+    padding: 20px 0;
+    text-align: center;
+    color: aliceblue;
+}
+#content {
+    height: 100%;
+    background-color: rgba(206,206,206,0.7);
+    overflow: hidden;
+    border-radius: 10px;
+}
+#content a {
+    padding: 10px;
+}
+form {
+    padding:10px;
+}
+#splash {
+    padding: 100px 0;
+    text-align: center;
+    color: aliceblue;
+}
+iframe {
+    padding: 20px;
+    margin: 0 auto;
+}

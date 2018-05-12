@@ -1,0 +1,19 @@
+{
+  "name": "deliverable5",
+  "version": "1.0.0",
+  "description": "This is an welcoming page notifying a brand new online service is coming soon. This website connect young people with opportunities. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "IdeaLoop - Yujia Wang & Kevin Liu",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "ws": "3.3.2"
+  }
+}
