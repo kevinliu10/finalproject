@@ -30,11 +30,51 @@ module.exports.openDashboard = function(req, res){
     res.render('dashboard.ejs', {});
 };
 
-function isEmpty(str){
-    return (str.length === 0 || !str.trim());
+var mongoose = require('mongoose');
+var News = mongoose.model('News');
+
+var createNews = function(req,res){
+    var news = new News({
+        "title":req.body.title,
+        "date":req.body.date,
+        "author":req.body.author,
+        "content":req.body.content
+    });
+    news.save(function(err,newNews){
+        if(!err){
+            res.send(newNews);
+        }else{
+            res.sendStatus(400);
+        }
+    });
 };
 
-function validateEmail(email){
-    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
-    return isEmpty(email) || re.test(email);
+var findAllNews = function(req,res){
+    News.find(function(err,news){
+        if(!err){
+            res.send(news);
+        }else{
+            res.sendStatus(404);
+        }
+    });
+};
+
+var findSingleNews = function(req,res){
+    var newsInx = req.params.id;
+    News.findById(newsInx,function(err,news){
+        if(!err){
+            res.send(news);
+        }else{
+            res.sendStatus(404);
+        }
+    });
+};
+
+module.exports.displayNews = function(req, res) {
+    res.render('industryNews', {news : News.findAllNews()})
 }
+
+module.exports.createNews = createNews;
+module.exports.findAllNews = findAllNews;
+module.exports.findSingleNews = findSingleNews;
+

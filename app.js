@@ -3,7 +3,7 @@ const app = express();
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3003;
 
 // Database setup
 require('./models/db.js');
