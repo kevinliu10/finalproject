@@ -21,7 +21,7 @@ module.exports = function(app, passport) {
         failureRedirect: '/signup',
         failureFlash: true
     }));
-}
+};
 
 
 router.post('/news',controller.createNews);
