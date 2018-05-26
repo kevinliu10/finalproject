@@ -13,6 +13,16 @@ router.get('/sampleVideo.ejs',controller.openSampleVideo);
 router.get('/login.ejs',controller.openLogin);
 router.get('/register.ejs',controller.openRegister);
 router.get('/dashboard.ejs',controller.openDashboard);
+router.get('/logout', controller.logout);
+
+module.exports = function(app, passport) {
+    router.post('/signup', passport.authenticate('local-signup', {
+        successRedirect: '/profile',
+        failureRedirect: '/signup',
+        failureFlash: true
+    }));
+}
+
 
 router.post('/news',controller.createNews);
 router.get('/news',controller.findAllNews);

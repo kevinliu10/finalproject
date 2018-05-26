@@ -19,20 +19,18 @@
     <h5>Log In</h5>
         <div id="content">
             <div id="loginscreen">
-                <form>
-                    Email
-                    <div class="searchbar">
-                        <input type="text" width="20px">
+
+                <form action="/login" method="post">
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="email">
                     </div>
-                    <br>
-                    Password
-                    <div class="searchbar">
-                        <input type="text" width="20px">
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="password">
                     </div>
-                    <br>
-                    <div class="searchbutton">
-                        <input type="submit" value="Log In">
-                    </div>
+
+                    <button type="submit">Login</button>
                 </form>
 
                 <a href="./register.ejs">Need to make an account?</a>

@@ -1,7 +1,7 @@
 {
-  "name": "deliverable5",
+  "name": "Idealink",
   "version": "1.0.0",
-  "description": "This is an welcoming page notifying a brand new online service is coming soon. This website connect young people with opportunities. ",
+  "description": "Graduate career help",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +10,17 @@
   "author": "IdeaLoop - Yujia Wang & Kevin Liu",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
     "ejs": "^2.5.8",
     "express": "^4.16.3",
-    "mongoose": "^5.1.0"
+    "express-session": "^1.15.6",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.1.2",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "ws": "3.3.2"

@@ -22,51 +22,20 @@
 
         <div id="content">
             <div id="loginscreen">
-                <form>
-                    First Name
-                    <div class="searchbar">
-                        <input type="text" width="20px">
+
+                <form action="/signup" method="post">
+                    <div>
+                        <label>Email</label>
+                        <input type="text" name="email">
                     </div>
-                    <br>
-                    Last Name
-                    <div class="searchbar">
-                        <input type="text" width="20px">
+                    <div>
+                        <label>Password</label>
+                        <input type="password" name="password">
                     </div>
-                    <br>
-                    Email
-                    <div class="searchbar">
-                        <input type="text" width="20px">
-                    </div>
-                    <br>
-                    Password
-                    <div class="searchbar">
-                        <input type="text" width="20px">
-                    </div>
-                    <br>
-                    Confirm Password
-                    <div class="searchbar">
-                        <input type="text" width="20px">
-                    </div>
-                    <br>
-                    Age
-                    <div class="searchbar">
-                        <input type="text" width="20px">
-                    </div>
-                    <br>
-                    Major
-                    <div class="searchbar">
-                        <input type="text" width="20px">
-                    </div>
-                    <br>
-                    Experience
-                    <div class="searchbar">
-                        <input type="text" width="20px">
-                    </div>
-                    <br>
-                    <div class="searchbutton">
-                        <input type="submit" value="Register">
-                    </div>
+
+                    <button type="submit">Signup</button>
                 </form>
+
                 <a href="./login.ejs">Already have an account?</a>
             </div>
         </div>
