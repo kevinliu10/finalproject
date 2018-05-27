@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var News = mongoose.model('News');
+var Jobs = mongoose.model('Jobs');
 
 
 module.exports.openIndexPage = function(req, res){
@@ -83,7 +84,47 @@ var findSingleNews = function(req,res){
         }
     });
 };
+
+var createJobs = function(req,res){
+    var jobs = new Jobs({
+        "title":req.body.title,
+        "date":req.body.date,
+        "author":req.body.author,
+        "content":req.body.content
+    });
+    jobs.save(function(err,newJobs){
+        if(!err){
+            res.send(newJobs);
+        }else{
+            res.sendStatus(400);
+        }
+    });
+};
+
+var findAllJobs = function(req,res){
+    Jobs.find(function(err,jobs){
+        if(!err){
+            res.send(jobs);
+        }else{
+            res.sendStatus(404);
+        }
+    });
+};
+
+var findSingleJobs = function(req,res){
+    var jobsInx = req.params.id;
+    Jobs.findById(jobsInx,function(err,jobs){
+        if(!err){
+            res.render('jobOpportunities', {jobs});
+        }else{
+            res.sendStatus(404);
+        }
+    });
+};
 module.exports.createNews = createNews;
 module.exports.findAllNews = findAllNews;
 module.exports.findSingleNews = findSingleNews;
+module.exports.createJobs = createJobs;
+module.exports.findAllJobs = findAllJobs;
+module.exports.findSingleJobs = findSingleJobs;
 

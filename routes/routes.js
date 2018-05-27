@@ -4,7 +4,7 @@ const controller = require('../controllers/controller');
 const passport = require('passport');
 
 
-router.get('/', controller.openHome);
+router.get('/', controller.openLogin);
 router.get('/home.ejs',controller.openHome);
 router.get('/industryNews.ejs',controller.openIndustryNews);
 router.get('/interviewSkills.ejs',controller.openInterviewSkills);
@@ -32,5 +32,8 @@ router.post('/login', passport.authenticate('local-login', {
 router.post('/news',controller.createNews);
 router.get('/news',controller.findAllNews);
 router.get('/news/:id',controller.findSingleNews);
+router.post('/jobs',controller.createJobs);
+router.get('/jobs',controller.findAllJobs);
+router.get('/jobs/:id',controller.findSingleJobs);
 
 module.exports = router;

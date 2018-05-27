@@ -8,12 +8,12 @@
 <body>
 
     <nav>
-        <a id="logo" href="/">IdeaLink.</a>
-        <a href="../industryNews.ejs">Industry News</a>
-        <a href="../jobOpportunities.ejs">Job Opportunities</a>
+        <a id="logo" href="../home.ejs">IdeaLink.</a>
+        <a href="../news/5b097b298a61b17921e8448f">Industry News</a>
+        <a href="../jobs/5b0a89374d3b2e8194a4de7f">Job Opportunities</a>
         <a href="../resumeSkills.ejs">Resume Skills</a>
         <a href="../interviewSkills.ejs">Interview Skills</a>
-        <a id="login" href="../login.ejs">Log In</a>
+        <a id="login" href="../dashboard.ejs">Dashboard</a>
     </nav>
 
     <h5>Industry News</h5>
@@ -23,6 +23,7 @@
         <h8><%=news.author%></h8>
         <p><%=news.content%></p>
         <a href="/news/<%=news.next%>">Next</a>
+        <br><br>
     </div>
 
 

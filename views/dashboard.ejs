@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Industry News</title>
+    <title>Dashboard</title>
     <link href="../styles/styles.css" rel="stylesheet">
 </head>
 <body>
 
     <nav>
-        <a id="logo" href="/">IdeaLink.</a>
-        <a href="./industryNews.ejs">Industry News</a>
-        <a href="./jobOpportunities.ejs">Job Opportunities</a>
+        <a id="logo" href="./home.ejs">IdeaLink.</a>
+        <a href="./news/5b097b298a61b17921e8448f">Industry News</a>
+        <a href="../jobs/5b0a89374d3b2e8194a4de7f">Job Opportunities</a>
         <a href="./resumeSkills.ejs">Resume Skills</a>
         <a href="./interviewSkills.ejs">Interview Skills</a>
         <a id="login" href="./dashboard.ejs">Dashboard</a>
@@ -20,13 +20,9 @@
 
     <div id="content">
         <br>
-        <a href="">Pending Applications</a>
+        <h4>Welcome <%= user.local.email %>!</h4>
         <br>
-        <a href="">Update CV</a>
-        <br>
-        <a href="">Update Account Information</a>
-        <br>
-        <a href="">Log Out</a>
+        <a href="./logout">Log Out</a>
         <br><br>
     </div>
 
