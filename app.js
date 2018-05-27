@@ -31,7 +31,6 @@ app.use(flash());
 // Routes setup
 const router = require('./routes/routes');
 
-
 app.use(router);
 
 app.listen(PORT, function() {

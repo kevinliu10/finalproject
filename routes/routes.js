@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/controller');
+const passport = require('passport');
 
 
 router.get('/', controller.openHome);
@@ -15,13 +16,17 @@ router.get('/register.ejs',controller.openRegister);
 router.get('/dashboard.ejs',controller.openDashboard);
 router.get('/logout', controller.logout);
 
-module.exports = function(app, passport) {
-    router.post('/signup', passport.authenticate('local-signup', {
-        successRedirect: '/profile',
-        failureRedirect: '/signup',
-        failureFlash: true
-    }));
-};
+router.post('/signup', passport.authenticate('local-signup', {
+    successRedirect: '/dashboard.ejs',
+    failureRedirect: '/signup.ejs',
+    failureFlash: true
+}));
+
+router.post('/login', passport.authenticate('local-login', {
+    successRedirect : '/dashboard.ejs',
+    failureRedirect : '/login.ejs',
+    failureFlash : true
+}));
 
 
 router.post('/news',controller.createNews);
