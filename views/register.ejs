@@ -16,6 +16,10 @@
         <div id="content">
             <div id="loginscreen">
 
+                <% if (message.length > 0) { %>
+                <div class="alert alert-danger"><%= message %></div>
+                <% } %>
+
                 <form action="/signup" method="post">
                     <div>
                         <label>Email</label>
