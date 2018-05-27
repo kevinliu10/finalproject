@@ -121,6 +121,29 @@ var findSingleJobs = function(req,res){
         }
     });
 };
+
+function validateForm(){
+    if (isEmpty(document.getElementById('data_1').value.trim())) {
+        alert('Please enter your email!');
+        return false;
+    }
+    if (!validateEmail(document.getElementById('data_1').value.trim())) {
+        alert('EMAIL must be a valid email address!');
+        return false;
+    }
+    alert('Hi, we will inform you via email as soon as we are available.' )
+    return true;
+};
+
+function isEmpty(str){
+    return (str.length === 0 || !str.trim());
+};
+
+function validateEmail(email){
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+    return isEmpty(email) || re.test(email);
+}
+
 module.exports.createNews = createNews;
 module.exports.findAllNews = findAllNews;
 module.exports.findSingleNews = findSingleNews;
