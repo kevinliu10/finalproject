@@ -18,7 +18,7 @@ router.get('/logout', controller.logout);
 
 router.post('/signup', passport.authenticate('local-signup', {
     successRedirect: '/dashboard.ejs',
-    failureRedirect: '/signup.ejs',
+    failureRedirect: '/register.ejs',
     failureFlash: true
 }));
 
